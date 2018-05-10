@@ -8,6 +8,7 @@ import { Proveeder1Provider } from '../../providers/proveeder1/proveeder1';
 })
 export class HomePage {
   stores
+  imageNum: integer = 3
   constructor(public navCtrl: NavController, public provider: Proveeder1Provider ) {}
 
   ionViewDidLoad(){

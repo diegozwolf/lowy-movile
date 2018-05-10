@@ -1,14 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Stores</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Stores</h2>
-  <ion-list>
+  <ion-card *ngFor="let store of stores">
+    <img src="assets/imgs/store-{{imageNum}}.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{store.id}} - {{store.name}}
+      </ion-card-title>
+      <p>address: {{store.address}}</p>
+      <p>phone: {{store.phone}}</p>
+  </ion-card-content>
+</ion-card>
+
+
+
+  <!-- <ion-list>
     <button ion-item *ngFor="let store of stores">
       {{store.id}} - {{store.name}}
     </button>
-  </ion-list>
+
+  </ion-list> -->
+
 </ion-content>
